@@ -187,7 +187,7 @@ class LightweightPlanSerializer(
         )
         extra_kwargs = {
             "plan_id": {"required": True, "read_only": True},
-            "plan_name": {"required": True, "read_only": True},
+            "plan_name": {"required": False, "read_only": True},
         }
 
     plan_id = PlanUUIDField()
@@ -226,8 +226,8 @@ class SubscriptionCustomerSummarySerializer(
         model = SubscriptionRecord
         fields = ("billing_plan_name", "plan_version", "end_date", "auto_renew")
 
-    billing_plan_name = serializers.CharField(source="billing_plan.plan.plan_name")
-    plan_version = serializers.IntegerField(source="billing_plan.version")
+    billing_plan_name = serializers.CharField()
+    plan_version = serializers.IntegerField()
 
 
 class SubscriptionCustomerDetailSerializer(SubscriptionCustomerSummarySerializer):
@@ -247,14 +247,8 @@ class LightweightAddOnSerializer(TimezoneFieldMixin, serializers.ModelSerializer
             "billing_frequency": {"required": True},
         }
 
-    addon_name = serializers.CharField(
-        help_text="The name of the add-on plan.",
-        source="plan_name",
-    )
-    addon_id = AddOnUUIDField(
-        source="plan_id",
-        help_text="The ID of the add-on plan.",
-    )
+    addon_name = serializers.CharField()
+    addon_id = AddOnUUIDField()
     addon_type = serializers.SerializerMethodField()
     billing_frequency = serializers.SerializerMethodField()
 
@@ -491,6 +485,8 @@ class InvoiceSerializer(
             "end_date",
             "seller",
             "invoice_pdf",
+            "public_proof",
+            "is_paid",
         )
         extra_kwargs = {
             "invoice_id": {"required": True, "read_only": True},
@@ -593,7 +589,7 @@ class CustomerIntegrationsSerializer(serializers.Serializer):
     braintree = CustomerBraintreeIntegrationSerializer(required=False, allow_null=True)
 
 
-@extend_schema_serializer(deprecate_fields=["address"])
+
 class CustomerSerializer(
     ConvertEmptyStringToNullMixin, TimezoneFieldMixin, serializers.ModelSerializer
 ):

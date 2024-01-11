@@ -12,7 +12,7 @@ from rest_framework import serializers
 
 class CustomerCreatedSerializer(serializers.Serializer):
     payload = CustomerSerializer()
-    eventType = serializers.CharField(
+    event_type = serializers.CharField(
         default=WEBHOOK_TRIGGER_EVENTS.CUSTOMER_CREATED, read_only=True
     )
 
@@ -40,7 +40,7 @@ class InvoicePastDueSerializer(serializers.Serializer):
 
 class SubscriptionCreatedSerializer(serializers.Serializer):
     payload = SubscriptionRecordSerializer()
-    eventType = serializers.CharField(
+    event_type = serializers.CharField(
         default=WEBHOOK_TRIGGER_EVENTS.SUBSCRIPTION_CREATED, read_only=True
     )
 

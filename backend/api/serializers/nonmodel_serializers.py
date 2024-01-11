@@ -39,7 +39,7 @@ class AccessMethodsSubscriptionRecordSerializer(
         }
 
     subscription_filters = SubscriptionFilterSerializer(many=True)
-    plan = LightweightPlanVersionSerializer(source="billing_plan")
+    plan = serializers.SlugRelatedField(slug_field="plan_id", queryset=PlanVersion.objects.all())
 
 
 class MetricAccessPerSubscriptionSerializer(serializers.Serializer):
@@ -148,7 +148,7 @@ class CustomerDeleteResponseSerializer(serializers.Serializer):
 class VersionSelectorSerializer(serializers.Serializer):
     version_ids = SlugRelatedFieldWithOrganization(
         slug_field="version_id",
-        queryset=PlanVersion.plan_versions.all(),
+                queryset=PlanVersion.objects.all(),
         required=False,
         many=True,
         help_text="The version_ids of the plan versions you want to add the feature to. If you want to apply to all versions, use the all_versions parameter.",

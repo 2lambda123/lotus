@@ -1,3 +1,4 @@
+from backend.api.error_responses import ErrorResponse
 from api.serializers.model_serializers import (
     FeatureSerializer,
     LightweightCustomerSerializer,

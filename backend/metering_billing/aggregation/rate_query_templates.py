@@ -86,7 +86,7 @@ SELECT
     time_bucket('1 second', "metering_billing_usageevent"."time_created") AS bucket,
     COUNT(
         "metering_billing_usageevent"."idempotency_id"
-    ) AS num_events, 
+    ) AS num_events,
     {% if query_type == "count" -%}
     COUNT(
         "metering_billing_usageevent"."idempotency_id"
@@ -154,7 +154,7 @@ GROUP BY
 
 RATE_CAGG_TOTAL = """
 WITH rate_per_bucket AS (
-    SELECT 
+    SELECT
         uuidv5_customer_id
         {%- for group_by_field in group_by %}
         , {{ group_by_field }}
@@ -233,7 +233,7 @@ ORDER BY
 
 RATE_TOTAL_PER_DAY = """
 WITH rate_per_bucket AS (
-    SELECT 
+    SELECT
         uuidv5_customer_id
         {%- for group_by_field in group_by %}
         , {{ group_by_field }}
@@ -266,7 +266,7 @@ WITH rate_per_bucket AS (
         AND uuidv5_customer_id = '{{ uuidv5_customer_id }}'
         {% endif %}
 )
-, per_groupby AS (   
+, per_groupby AS (
     SELECT
         uuidv5_customer_id
         {%- for group_by_field in group_by %}
@@ -311,7 +311,7 @@ WITH rate_per_bucket AS (
         usage_qty_per_day DESC
 )
 , top_n AS (
-    SELECT 
+    SELECT
         uuidv5_customer_id
         , SUM(usage_qty_per_day) AS total_usage_qty
     FROM
@@ -322,11 +322,11 @@ WITH rate_per_bucket AS (
         total_usage_qty DESC
     LIMIT {{ top_n }}
 )
-SELECT 
+SELECT
     COALESCE(top_n.uuidv5_customer_id, uuid_nil()) AS uuidv5_customer_id
     , SUM(per_customer.usage_qty_per_day) AS usage_qty
     , per_customer.time_bucket AS time_bucket
-FROM 
+FROM
     per_customer
 LEFT JOIN
     top_n

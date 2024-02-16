@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                     RETURN NEW;
                 END;
                 $$ LANGUAGE plpgsql;
-                
+
                 CREATE TRIGGER event_insert_trigger BEFORE INSERT ON metering_billing_usageevent
                     FOR EACH ROW EXECUTE PROCEDURE insert_event_with_idempotency_check();
             """,

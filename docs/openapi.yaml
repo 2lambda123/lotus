@@ -3721,7 +3721,7 @@ components:
           enum:
           - stripe
           - braintree
-          - 
+          -
           type: string
           description: |-
             * `stripe` - Stripe
@@ -5855,7 +5855,7 @@ components:
           enum:
           - stripe
           - braintree
-          - 
+          -
           type: string
           description: |-
             * `stripe` - Stripe
@@ -5955,7 +5955,7 @@ components:
           enum:
           - stripe
           - braintree
-          - 
+          -
           type: string
           description: |-
             * `stripe` - Stripe
@@ -8478,7 +8478,7 @@ components:
           enum:
           - stripe
           - braintree
-          - 
+          -
           type: string
           description: |-
             * `stripe` - Stripe
@@ -8610,7 +8610,7 @@ components:
           enum:
           - stripe
           - braintree
-          - 
+          -
           type: string
           description: |-
             * `stripe` - Stripe
@@ -8687,7 +8687,7 @@ components:
           enum:
           - stripe
           - braintree
-          - 
+          -
           type: string
           description: |-
             * `stripe` - Stripe
@@ -8728,7 +8728,7 @@ components:
           - intermediate
           - in_advance
           - one_time
-          - 
+          -
           type: string
           description: |-
             * `in_arrears` - In Arrears
@@ -8843,7 +8843,7 @@ components:
           - intermediate
           - in_advance
           - one_time
-          - 
+          -
           type: string
           description: |-
             * `in_arrears` - In Arrears
@@ -8967,7 +8967,7 @@ components:
           enum:
           - stripe
           - braintree
-          - 
+          -
           type: string
           description: |-
             * `stripe` - Stripe
@@ -9178,7 +9178,7 @@ components:
           enum:
           - stripe
           - braintree
-          - 
+          -
           type: string
           description: |-
             * `stripe` - Stripe
@@ -9285,7 +9285,7 @@ components:
           enum:
           - stripe
           - braintree
-          - 
+          -
           type: string
           description: |-
             * `stripe` - Stripe
@@ -9660,7 +9660,7 @@ components:
           - quarters
           - years
           - total
-          - 
+          -
           type: string
           readOnly: true
           nullable: true
@@ -9679,7 +9679,7 @@ components:
           enum:
           - delta
           - total
-          - 
+          -
           type: string
           readOnly: true
           nullable: true
@@ -9734,7 +9734,7 @@ components:
           - quarters
           - years
           - total
-          - 
+          -
           type: string
           readOnly: true
           nullable: true
@@ -9856,7 +9856,7 @@ components:
           - unique
           - latest
           - average
-          - 
+          -
           type: string
           writeOnly: true
           nullable: true
@@ -9877,7 +9877,7 @@ components:
           - unique
           - latest
           - average
-          - 
+          -
           type: string
           description: |-
             * `count` - Count
@@ -9898,7 +9898,7 @@ components:
           - quarters
           - years
           - total
-          - 
+          -
           type: string
           writeOnly: true
           nullable: true
@@ -9917,7 +9917,7 @@ components:
           enum:
           - delta
           - total
-          - 
+          -
           type: string
           writeOnly: true
           nullable: true
@@ -9954,7 +9954,7 @@ components:
           - quarters
           - years
           - total
-          - 
+          -
           type: string
           writeOnly: true
           nullable: true
@@ -10021,7 +10021,7 @@ components:
           - quarters
           - years
           - total
-          - 
+          -
           type: string
           readOnly: true
           nullable: true
@@ -10065,7 +10065,7 @@ components:
           - quarters
           - years
           - total
-          - 
+          -
           type: string
           readOnly: true
           nullable: true
@@ -10091,7 +10091,7 @@ components:
           enum:
           - delta
           - total
-          - 
+          -
           type: string
           readOnly: true
           nullable: true
@@ -10139,7 +10139,7 @@ components:
           - latest
           - average
           - ''
-          - 
+          -
           type: string
           description: |-
             * `count` - Count
@@ -13405,7 +13405,7 @@ components:
           - monthly
           - quarterly
           - yearly
-          - 
+          -
           type: string
           nullable: true
           description: |-
@@ -13508,7 +13508,7 @@ components:
           - week
           - month
           - year
-          - 
+          -
           type: string
           description: |-
             * `day` - day
@@ -13527,7 +13527,7 @@ components:
           - week
           - month
           - year
-          - 
+          -
           type: string
           description: |-
             * `day` - day
@@ -13570,7 +13570,7 @@ components:
           - week
           - month
           - year
-          - 
+          -
           type: string
           description: |-
             * `day` - day
@@ -13589,7 +13589,7 @@ components:
           - week
           - month
           - year
-          - 
+          -
           type: string
           description: |-
             * `day` - day
@@ -13625,7 +13625,7 @@ components:
           - monthly
           - quarterly
           - yearly
-          - 
+          -
           type: string
           writeOnly: true
           nullable: true
@@ -13661,7 +13661,7 @@ components:
           - monthly
           - quarterly
           - yearly
-          - 
+          -
           type: string
           nullable: true
           description: |-
@@ -14260,7 +14260,7 @@ components:
           - round_down
           - round_nearest
           - no_rounding
-          - 
+          -
           description: |-
             * `round_up` - round_up
             * `round_down` - round_down
@@ -14321,7 +14321,7 @@ components:
           - round_down
           - round_nearest
           - no_rounding
-          - 
+          -
           type: string
           description: |-
             * `round_up` - Round Up
@@ -14440,7 +14440,7 @@ components:
           - week
           - month
           - year
-          - 
+          -
           type: string
           description: |-
             * `day` - day
@@ -14460,7 +14460,7 @@ components:
           - week
           - month
           - year
-          - 
+          -
           type: string
           description: |-
             * `day` - day
@@ -14522,7 +14522,7 @@ components:
           - week
           - month
           - year
-          - 
+          -
           type: string
           description: |-
             * `day` - day
@@ -14542,7 +14542,7 @@ components:
           - week
           - month
           - year
-          - 
+          -
           type: string
           description: |-
             * `day` - day
@@ -15262,7 +15262,7 @@ components:
           - refund
           - charge_prorated
           - charge_full
-          - 
+          -
           type: string
           nullable: true
           description: |-

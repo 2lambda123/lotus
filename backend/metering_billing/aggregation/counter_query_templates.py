@@ -230,7 +230,7 @@ WITH per_customer AS (
     ORDER BY
         usage_qty_per_day DESC
 ), top_n AS (
-    SELECT 
+    SELECT
         uuidv5_customer_id
         , SUM(usage_qty_per_day) AS total_usage_qty
     FROM
@@ -241,11 +241,11 @@ WITH per_customer AS (
         total_usage_qty DESC
     LIMIT {{ top_n }}
 )
-SELECT 
+SELECT
     COALESCE(top_n.uuidv5_customer_id, uuid_nil()) AS uuidv5_customer_id
     , SUM(per_customer.usage_qty_per_day) AS usage_qty
     , per_customer.time_bucket AS time_bucket
-FROM 
+FROM
     per_customer
 LEFT JOIN
     top_n

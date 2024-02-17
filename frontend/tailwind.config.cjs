@@ -20,7 +20,7 @@ module.exports = {
       black: 900,
     },
 
-    
+
 
     extend: {
       colors: {

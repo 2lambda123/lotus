@@ -94,7 +94,7 @@ jobs:
               export PYTEST_COVERAGE_SUCCEEDED=false
             fi
             sleep 5s
-          done 
+          done
           if [[ "${PYTEST_COVERAGE_SUCCEEDED}" == "true" ]]; then
             echo "Pytest succeeded"
           else

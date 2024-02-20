@@ -18,14 +18,14 @@ class Migration(migrations.Migration):
                 p_time_created timestamp with time zone,
                 p_properties jsonb,
                 p_idempotency_id text
-            ) RETURNS VOID AS $$ DECLARE 
-            
+            ) RETURNS VOID AS $$ DECLARE
+
             uuidv5_event_name uuid;
             uuidv5_idempotency_id uuid;
             uuidv5_customer_id uuid;
 
-            BEGIN 
-            
+            BEGIN
+
             uuidv5_customer_id := uuid_generate_v5(
                 'D1337E57-E6A0-4650-B1C3-D6487AFFB8CA' :: uuid,
                 p_cust_id

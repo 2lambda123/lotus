@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
             END;
             $$ LANGUAGE plpgsql;
             """,
-            """ 
+            """
             DROP FUNCTION IF EXISTS update_billing_record();
             """,
         ),

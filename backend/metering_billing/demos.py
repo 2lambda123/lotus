@@ -2520,7 +2520,9 @@ def setup_database_demo(
     # top customers by plan
     top_customers_by_plan = []
     for plan in [pro_plan_bp_monthly, pay_as_you_go_bp_monthly]:
-        customers = Customer.objects.filter(organization=organization,).order_by(
+        customers = Customer.objects.filter(
+            organization=organization,
+        ).order_by(
             "?"
         )[:5]
         top_customers_by_total_revenue = []

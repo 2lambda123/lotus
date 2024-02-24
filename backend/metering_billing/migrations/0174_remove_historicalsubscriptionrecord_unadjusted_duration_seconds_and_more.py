@@ -6,16 +6,16 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('metering_billing', '0173_move_seconds_to_microseconds'),
+        ("metering_billing", "0173_move_seconds_to_microseconds"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='historicalsubscriptionrecord',
-            name='unadjusted_duration_seconds',
+            model_name="historicalsubscriptionrecord",
+            name="unadjusted_duration_seconds",
         ),
         migrations.RemoveField(
-            model_name='subscriptionrecord',
-            name='unadjusted_duration_seconds',
+            model_name="subscriptionrecord",
+            name="unadjusted_duration_seconds",
         ),
     ]

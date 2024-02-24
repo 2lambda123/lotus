@@ -6,15 +6,15 @@ RUN apk add --no-cache git ca-certificates \
     && update-ca-certificates
 
 ENV USER=appuser
-ENV UID=10001 
+ENV UID=10001
 
-RUN adduser \    
-    --disabled-password \    
-    --gecos "" \    
-    --home "/nonexistent" \    
-    --shell "/sbin/nologin" \    
-    --no-create-home \    
-    --uid "${UID}" \    
+RUN adduser \
+    --disabled-password \
+    --gecos "" \
+    --home "/nonexistent" \
+    --shell "/sbin/nologin" \
+    --no-create-home \
+    --uid "${UID}" \
     "${USER}"
 
 
